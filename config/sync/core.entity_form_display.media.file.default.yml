@@ -4,10 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.media.file.field_media_file
+    - field.field.media.file.field_tipo_licencia
     - media.type.file
   module:
     - file
-    - path
 _core:
   default_config_hash: 50n0D6KiBgpTONc-n8sPE24kUJQgu1UafJ2Vshd0q2I
 id: media.file.default
@@ -15,47 +15,30 @@ targetEntityType: media
 bundle: file
 mode: default
 content:
-  created:
-    type: datetime_timestamp
-    weight: 10
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_media_file:
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
-    weight: 0
+    weight: 1
     region: content
-  langcode:
-    type: language_select
+  field_tipo_licencia:
     weight: 2
-    region: content
-    settings:
-      include_locked: true
-    third_party_settings: {  }
-  path:
-    type: path
-    weight: 30
-    region: content
     settings: {  }
     third_party_settings: {  }
-  status:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 100
+    type: options_select
     region: content
-    third_party_settings: {  }
-  uid:
-    type: entity_reference_autocomplete
-    weight: 5
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
     settings:
-      match_operator: CONTAINS
       size: 60
       placeholder: ''
-    region: content
     third_party_settings: {  }
 hidden:
-  name: true
+  created: true
+  langcode: true
+  path: true
+  status: true
+  uid: true
