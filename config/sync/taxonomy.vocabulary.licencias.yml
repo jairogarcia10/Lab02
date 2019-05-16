@@ -1,0 +1,8 @@
+uuid: 229eab9a-e748-4dd1-9e82-3aab61e70596
+langcode: es
+status: true
+dependencies: {  }
+name: Licencias
+vid: licencias
+description: 'Es para agregar licencias'
+weight: 0
